@@ -96,9 +96,14 @@ const makeHobbits = () => {
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
-
+  const $theRing = $("<div id='the-ring'></div>");
+  console.log($theRing);
   // 2. add the ring as a child of Frodo
-
+  $(".hobbit").each(function(){
+    if($(this).text() === "Frodo Baggins"){
+    $(this).append($theRing);
+    }
+  });
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
   // when you think you have given Frodo the ring, check in your Elements tab
