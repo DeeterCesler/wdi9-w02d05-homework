@@ -80,7 +80,7 @@ const makeHobbits = () => {
     $("#The-Shire ul").append(`<li>${element}</li>`);
   });
   // 2. give each hobbit a class of "hobbit"
-  $("li").attr("class", "hobbit");
+  $("#The-Shire ul li").attr("class", "hobbit");
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
@@ -97,7 +97,6 @@ const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
   const $theRing = $("<div id='the-ring'></div>");
-  console.log($theRing);
   // 2. add the ring as a child of Frodo
   $(".hobbit").each(function(){
     if($(this).text() === "Frodo Baggins"){
@@ -137,11 +136,14 @@ const makeBaddies = () => {
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
-
+  $body.append("<aside/>");
   // 2. display an unordered list of buddies in the aside
-
+  $("aside").append("<ul/>");
+  buddies.forEach(element => {
+    $("aside ul").append(`<li>${element}</li>`);
+  });
   // 3. give each of the buddies a class of "buddy"
-
+  $("aside ul li").attr("class", "buddy");
 };
 
 // COMMIT YOUR WORK
