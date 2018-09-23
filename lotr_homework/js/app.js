@@ -143,7 +143,7 @@ const makeBuddies = () => {
     $("aside ul").append(`<li>${element}</li>`);
   });
   // 3. give each of the buddies a class of "buddy"
-  $("aside ul li").attr("class", "bucddy");
+  $("aside ul li").attr("class", "buddy");
 };
 
 // COMMIT YOUR WORK
@@ -169,7 +169,11 @@ const leaveTheShire = () => {
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-
+  $(".buddy").each(function(){
+    if($(this).text() === "Strider"){
+    $(this).text("Aragorn");
+    }
+  })
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
